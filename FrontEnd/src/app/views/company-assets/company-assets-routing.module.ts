@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MiningZoneComponent } from './mining-zone.component';
 import { MiningZoneCreateComponent } from './mining-zone-create.component';
+import { MiningZoneDetailsComponent } from './mining-zone-details.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,13 @@ const routes: Routes = [
         component: MiningZoneCreateComponent,
         data: {
           title: 'Nova Zona de Mineração'
+        }
+      },
+      {
+        path: 'mining-zones/:miningZoneId',
+        component: MiningZoneDetailsComponent,
+        data: {
+          title: 'Editar Zona de Mineração'
         }
       }
     

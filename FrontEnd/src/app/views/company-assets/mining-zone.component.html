@@ -47,16 +47,16 @@
               <th scope="col">Nome</th>
               <th scope="col">Tipo de Minério</th>
               <th scope="col">Lavra</th>
-              <th scope="col">Opções</th>
+              <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody >
-            <tr *ngFor="let miningZone of miningZones | async">
+            <tr *ngFor="let miningZone of miningZones; index as miningZoneId">
               <th scope="row">{{miningZone.id}}</th>
               <td>{{miningZone.name}}</td>
               <td>{{miningZone.oreType}}</td>
               <td>{{miningZone.mining}}</td>
-              <td><a type="button" class="btn btn-sm btn-primary" [routerLink]="['../mining-zone-create']" ><i class="fa far fa-edit"></i></a>
+              <td><a type="button" class="btn btn-sm btn-primary" [routerLink]="['../mining-zones/' + miningZoneId]" ><i class="fa far fa-edit"></i></a>
               </td>
             </tr>
             
@@ -64,4 +64,3 @@
         </table>
   
   </div>
-  

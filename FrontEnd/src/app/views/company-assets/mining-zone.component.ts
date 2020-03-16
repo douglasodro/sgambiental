@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import {MiningZoneService} from './mining-zone.service'
+import { MiningZone } from './mining-zone';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {MiningZoneService} from './mining-zone.service'
 export class MiningZoneComponent implements OnInit {
 
   searchForm;
-  miningZones;
+  miningZones: MiningZone[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,8 +30,14 @@ export class MiningZoneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.miningZones = this.miningZoneService.getMiningZoneList();
-    console.log('mining-zone', this.miningZones);
+    this.miningZoneService.getMiningZoneList().subscribe((data: any): void => {
+      this.miningZones = data;
+    })
+
   }
+
+  
+  
+
 
 }

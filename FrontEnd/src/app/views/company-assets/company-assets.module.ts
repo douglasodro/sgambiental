@@ -36,11 +36,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import {HttpClientModule} from '@angular/common/http';
 import { MiningZoneCreateComponent } from './mining-zone-create.component';
+import { MiningZoneDetailsComponent } from './mining-zone-details.component';
 
 
 
 @NgModule({
-  declarations: [MiningZoneComponent, MiningZoneCreateComponent],
+  declarations: [MiningZoneComponent, MiningZoneCreateComponent, MiningZoneDetailsComponent],
   imports: [
     CommonModule,
     CompanyAssetsRoutingModule,

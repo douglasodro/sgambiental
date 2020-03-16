@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 export class MiningZoneCreateComponent implements OnInit {
 
   checkoutForm;
+  
 
   constructor(
     private formBuilder: FormBuilder
@@ -23,7 +24,7 @@ export class MiningZoneCreateComponent implements OnInit {
       oreType: '',
       mining: '',
       area: '',
-      processType: ''
+      processingType: ''
 
       
     });
